@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beauty Advisor</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="white-bg">
+
+<div class="container vh-100 d-flex align-items-center justify-content-center">
+  <div class="camera-card text-center">
+
+    <h4 id="customerName" class="mb-3"></h4>
+
+    <!-- Camera -->
+    <video
+      id="camera"
+      class="camera-view mb-3"
+      autoplay
+      playsinline
+    ></video>
+
+    <!-- Results -->
+    <div class="camera-results text-start mb-4">
+      <p>لون البشرة: <strong id="skinTone">—</strong></p>
+      <p>شكل الوجه: <strong id="faceShape">—</strong></p>
+
+      <p class="mt-2 mb-1">المنتجات المقترحة:</p>
+      <ul class="mb-0">
+        <li id="foundation">—</li>
+        <li id="lipstick">—</li>
+        <li id="blush">—</li>
+      </ul>
+    </div>
+
+    <!-- Main Action -->
+    <button
+      id="captureBtn"
+      class="btn btn-dark w-100 round-btn mb-3"
+    >
+      تحليل الوجه
+    </button>
+
+    <!-- Secondary Actions -->
+    <div class="d-flex gap-2">
+      <button
+        id="qrBtn"
+        class="btn btn-outline-dark w-50 round-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#qrModal"
+      >
+        QR Code
+      </button>
+
+      <button
+        id="whatsappBtn"
+        class="btn btn-outline-dark w-50 round-btn"
+      >
+        WhatsApp
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- QR Modal -->
+<div class="modal fade" id="qrModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content qr-modal">
+
+      <h5 class="mb-3 text-center">امسحي الكود</h5>
+
+      <div class="qr-wrapper">
+        <img id="qrImage" alt="QR Code">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="camera.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beauty Advisor</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+
+<body class="white-bg">
+
+<main class="container vh-100 d-flex align-items-center justify-content-center">
+  <div class="form-card">
+
+    <h3 class="text-center mb-4">Beauty Advisor</h3>
+
+    <form id="customerForm">
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control form-control-lg"
+          name="name"
+          placeholder="الاسم"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <select
+          class="form-select form-select-lg"
+          name="country"
+          required
+        >
+          <option value="">الدولة</option>
+          <option value="+20">مصر</option>
+          <option value="+966">السعودية</option>
+          <option value="+971">الإمارات</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <input
+          type="tel"
+          class="form-control form-control-lg"
+          name="phone"
+          placeholder="رقم الموبايل"
+          required
+        />
+      </div>
+
+      <button class="btn btn-dark btn-lg w-100">
+        ابدأ
+      </button>
+
+    </form>
+  </div>
+</main>
+
+<script src="form.js"></script>
+</body>
+</html>
